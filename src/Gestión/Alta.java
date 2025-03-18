@@ -27,7 +27,6 @@ public class Alta {
             String asignatura2= input.obtenerTexto();
             output.mostrarMensaje("Escriba la nota de la segunda asignatura: ");
             int nota2 = input.obtenerEntero();
-
             Listado.getEstudiantes().add(new Estudiante(id, nombreCompleto, edad, asignatura1, nota1, asignatura2, nota2));
         }
     }
