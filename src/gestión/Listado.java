@@ -1,7 +1,6 @@
-package Gestión;
+package gestión;
 
-import Estudiantes.Estudiante;
-import Output.Output;
+import estudiantes.Estudiante;
 
 import java.util.ArrayList;
 import java.util.List;

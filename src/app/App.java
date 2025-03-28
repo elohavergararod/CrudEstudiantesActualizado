@@ -1,8 +1,14 @@
-package App;
+package app;
 
-import Gestión.*;
-import Input.Input;
-import Output.Output;
+import busquedaBinaria.BusquedaBinaria;
+import estudiantes.Estudiante;
+import gestión.*;
+import input.Input;
+import ordenacion.Inserción;
+import output.Output;
+
+import java.util.List;
+
 
 public class App {
     public static void main(String[] args) {
@@ -12,6 +18,7 @@ public class App {
         Baja baja = new Baja();
         Modificacion modificacion = new Modificacion();
         Listado listado = new Listado();
+        List<Estudiante> estudiantes = listado.getEstudiantes();
 
         int opcionEscogida;
 
@@ -23,6 +30,7 @@ public class App {
             switch (opcionEscogida){
                 case 1:
                     alta.agregarEstudiante();
+                    Inserción.insercion(estudiantes);
                     break;
                 case 2:
                     listado.listarEstudiantes(listado.getEstudiantes());
@@ -33,14 +41,19 @@ public class App {
                     modificacion.modificarNota1();
                     break;
                 case 4:
-                    listado.listarEstudiantes(listado.getEstudiantes());
+                    listado.listarEstudiantes(estudiantes);
                     break;
                 case 5:
+                    output.mostrarMensaje("Escriba el nombre del alumno:");
+                    String nombreAlumno = input.obtenerTexto();
+                    Inserción.insercion(estudiantes);
+                    System.out.println(BusquedaBinaria.buscar(estudiantes,nombreAlumno));;
+                    break;
+                case 6:
                     break;
                 default:
                     System.out.println("No es una opción válida, vuela a intentarlo.\n");
             }
-        }while(opcionEscogida != 5);
-
+        }while(opcionEscogida != 6);
     }
 }

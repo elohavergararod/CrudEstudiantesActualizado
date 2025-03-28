@@ -1,4 +1,4 @@
-package Estudiantes;
+package estudiantes;
 
 public class Estudiante {
     int id;
@@ -24,10 +24,14 @@ public class Estudiante {
     public void setNota1(int nota) {
         this.nota1 = nota;
     }
+    public String getNombre() {
+        return nombreCompleto;
+    }
 
 
     @Override
     public String toString() {
         return id + "\t" + nombreCompleto + "\t" + asignatura1 + " (" + nota1 + ")\t" + asignatura2 + " (" + nota2 + ")";
     }
+
 }

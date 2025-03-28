@@ -1,11 +1,8 @@
-package Gestión;
+package gestión;
 
-import Estudiantes.Estudiante;
-import Input.Input;
-import Output.Output;
-
-import java.util.ArrayList;
-import java.util.List;
+import estudiantes.Estudiante;
+import input.Input;
+import output.Output;
 
 
 public class Modificacion {
